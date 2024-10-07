@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0b27;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Container Styling */
+.container {
+    padding: 20px;
+    background-color: transparent;
+}
+
+/* Image Grid Styling */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images */
+    background-image: url('assets/more.png'); /* Background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center background */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Image Grid Styling */
+.image-grid1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images */
+    background-image: url('assets/more.png'); /* Background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center background */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+/* Grid Items (Images) */
+.grid-item {
+    width: calc(33.33% - 20px); /* Three images per row for larger screens */
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+/* Hover Effect for Larger Screens */
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for medium screens (tablets) */
+@media (max-width: 768px) {
+    .grid-item {
+        width: calc(50% - 20px); /* Two images per row for tablets */
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Responsive adjustments for small screens (mobile phones) */
+@media (max-width: 480px) {
+    .grid-item {
+        width: calc(100% - 20px); /* Single image per row for mobile phones */
+    }
+
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .image-grid {
+        background-size: contain; /* Ensure the background scales well on mobile */
+    }
+}
